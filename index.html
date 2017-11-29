@@ -1,8 +1,220 @@
 <!DOCTYPE html>
 <html>
+<head>
+
+    <link href="https://fonts.googleapis.com/css?family=Nunito:300,400,600,700,800,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Zilla+Slab:300,400,500,600,700" rel="stylesheet">
+
+    <style>
+        html, body, div, span, applet, object, iframe,
+        h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+        a, abbr, acronym, address, big, cite, code,
+        del, dfn, em, img, ins, kbd, q, s, samp,
+        small, strike, strong, sub, sup, tt, var,
+        b, u, i, center,
+        dl, dt, dd, ol, ul, li,
+        fieldset, form, label, legend,
+        table, caption, tbody, tfoot, thead, tr, th, td,
+        article, aside, canvas, details, embed,
+        figure, figcaption, footer, header, hgroup,
+        menu, nav, output, ruby, section, summary,
+        time, mark, audio, video {
+        	margin: 0;
+        	padding: 0;
+        	border: 0;
+        	font-size: 100%;
+        	font: inherit;
+        	vertical-align: baseline;
+        }
+
+        body {
+            font-family: 'Nunito', sans-serif;
+            font-size: 14px;
+            color:#5c5c5c;
+        }
+
+        p {
+            font-size: 1em; /* 14px */
+            line-height: 1.6429em; /* 23px */
+            margin: 0 0 1.6429em 0;
+        }
+
+        .shell {
+            width: 900px;
+            margin:55px;
+        }
+
+        .type-set {
+            margin-bottom:9em;
+        }
+
+        .display-xl, .display-l, .display-m, .display-s, .heading-xl, .heading-l, .heading-m, .heading-s {
+            font-family: 'Zilla Slab', serif;
+            font-weight: 300;
+            color:#000000;
+        }
+
+
+        /* base type scale styles */
+
+        .display-xl {
+            font-size: 6.1917em; /* 86.684px */
+            line-height: 1.0613em; /* 92px */
+            margin-bottom: 0.2653em;  margin-top: 0.0000em;
+        }
+
+        .display-l {
+            font-size: 5.1598em; /* 72.237px */
+            line-height: 1.2736em; /* 92px */
+            margin-bottom: 0.3184em;  margin-top: 0.0000em;
+        }
+
+        .display-m {
+            font-size: 4.2998em; /* 60.197px */
+            line-height: 1.1462em; /* 69px */
+            margin-bottom: 0.3821em;  margin-top: 0.0000em;
+        }
+
+        .display-s {
+            font-size: 3.5832em; /* 50.165px */
+            line-height: 1.3755em; /* 69px */
+            margin-bottom: 0.4585em;  margin-top: 0.0000em;
+        }
+
+        .heading-xl {
+            font-size: 2.9860em; /* 41.804px */
+            line-height: 1.1004em; /* 46px */
+            margin-bottom: 0.2502em;  margin-top: 0.0000em;
+        }
+
+        .heading-l {
+            font-size: 2.4883em; /* 34.836px */
+            line-height: 1.3205em; /* 46px */
+            margin-bottom: 0.3602em;  margin-top: 0.0000em;
+        }
+
+        .heading-m {
+            font-size: 2.0736em; /* 29.03px */
+            line-height: 1.5846em; /* 46px */
+            margin-bottom: 0.4923em;  margin-top: 0.0000em;
+        }
+
+        .heading-s {
+            font-size: 1.7280em; /* 24.192px */
+            line-height: 1.9015em; /* 46px */
+            margin-bottom: 0.5507em;  margin-top: 0.0000em;
+        }
+
+        .body-xl {
+            font-size: 1.4400em; /* 20.16px */
+            line-height: 1.3889em; /* 28px */
+            margin-bottom: 1.3889em;  margin-top: 0.0000em;
+        }
+
+        .body-l {
+            font-size: 1.2000em; /* 16.8px */
+            line-height: 1.6667em; /* 28px */
+            margin-bottom: 1.6667em;  margin-top: 0.0000em;
+        }
+
+        .body {
+            font-size: 1.0000em; /* 14px */
+            /*line-height: 1.8571em; /* 26px */
+            line-height: 1.6em; /* 26px */
+            margin-bottom: 1.8571em;  margin-top: 0.0000em;
+        }
+
+        .body-small {
+            font-size: 0.8334em; /* 11.667px */
+            line-height: 1.9714em; /* 23px */
+            margin-bottom: 1.9714em;  margin-top: 0.0000em;
+        }
+
+        .note {
+            font-size: 0.6944em; /* 9.722px */
+            line-height: 2.3658em; /* 23px */
+            margin-bottom: 2.3658em;  margin-top: 0.0000em;
+        }
+
+        .tiny {
+            font-size: 0.5787em; /* 8.102px */
+            line-height: 2.8388em; /* 23px */
+            margin-bottom: 2.8388em;  margin-top: 0.0000em;
+        }
+
+        /* style overrides */
+        .table-heading {
+            font-weight: 900;
+            text-transform: uppercase;
+            color:#999999;
+            margin-bottom:0;
+            letter-spacing: .04rem;
+        }
+
+        .center {
+            text-align: center;
+        }
+
+        .light-gray {
+            color:#7E7E7E;
+        }
+
+        .semi-bold {
+            font-weight: 500;
+        }
+
+    </style>
+
+</head>
+
     <body>
 
-        <p>type sytles why you no work?</p>
+        <div class="shell">
+            <div class="type-set">
+                <h1 class="display-xl">Display XL as an H1 that is long and wraps</h1>
+                <p class="body-xl">This is a paragraph with body XL. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
+            </div>
+
+            <div class="type-set">
+                <h1 class="display-xl">Display XL as an H1</h1>
+                <h2 class="heading-l">Followed by heading L as an H2 that gets kind sorta long</h2>
+                <p class="body">This is a paragraph. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
+            </div>
+
+            <div class="type-set">
+                <h1 class="heading-m">Heading M as an H1</h1>
+                <p class="body">This is a paragraph. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.Epsum factorial non deposit quid pro quo hic escorol. Olypian quarrels et gorilla congolium sic ad nauseum. Souvlaki ignitus carborundum e pluribus unum. Defacto lingo est igpay atinlay. Marquee selectus non provisio incongruous feline nolo contendre. Gratu.</p>
+            </div>
+
+            <div class="type-set">
+                <h1 class="heading-l">Heading L as an H1</h1>
+                <h2 class="heading-s">Heading S as an H2</h2>
+                <p class="body">This is a paragraph. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
+                <div class="tiny table-heading">Some little Note with custom styling</div>
+                <p class="body">This is a paragraph. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
+                <div class="tiny table-heading">Some little Note with custom styling</div>
+                <p class="body">This is a paragraph. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
+            </div>
+
+            <div class="type-set">
+                <h1 class="display-m">Display M as an H1</h1>
+                <p class="body-xl">This is a body XL statement it is probably good for hyping up statements that don't need to be in a heading tag.</p>
+                <p class="body">This is a paragraph. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
+            </div>
+
+            <div class="type-set">
+                <p>Bring it to life a little more</p>
+            </div>
+
+            <div class="type-set">
+                <h1 class="heading-xl center semi-bold">Post jobs to the nations largest <br />network of hourly job seekers</h1>
+                <p class="body-l center light-gray">Cast a wide net with our network of 80 million job seekers. Our algorithms will find employees to hire and notify the best ones to apply. We also help you refine your search so you can easily find that needle in a haystack.</p>
+            </div>
+
+
+
+
+        </div>
 
     </body>
 </html>
